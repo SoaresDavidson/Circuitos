@@ -56,7 +56,6 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(170,110)" name="Ground"/>
     <comp lib="0" loc="(200,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -362,4 +361,46 @@
     <wire from="(540,290)" to="(540,350)"/>
     <wire from="(540,390)" to="(540,460)"/>
   </circuit>
+  <vhdl name="subComplemento">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY subComplemento IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    A      : IN  std_logic_vector(3 DOWNTO 0); -- input vector example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    B      : OUT std_logic_vector(3 DOWNTO 0)  -- output vector example
+    );
+END subComplemento;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF subComplemento IS
+signal carry : std_logic_vector(3 DOWNTO 0);
+BEGIN
+	S(0) &lt;= A(0) xor B(0);
+	carry(1) &lt;= A(0) and B(0);
+	S(1) &lt;= ((A(1) xor carry(1)) xor B(1));
+	carry(2) &lt;= ((A(1) xor carry(1)) and B(1)) or carry(1);
+	S(2) &lt;= ((A(2) xor carry(2)) xor B(2));
+	carry(3) &lt;= ((A(2) xor carry(2)) and B(2)) or carry(2);
+	S(3) &lt;= ((A(3) xor carry(3)) xor B(3));
+	ov &lt;= ((A(3) xor carry(3)) and B(3)) or carry(3);
+END TypeArchitecture;
+</vhdl>
 </project>

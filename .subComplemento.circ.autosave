@@ -68,6 +68,14 @@
     <comp lib="0" loc="(200,290)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
+    <comp lib="0" loc="(290,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(290,480)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(420,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -79,6 +87,12 @@
     </comp>
     <comp lib="0" loc="(420,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(510,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(640,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -101,6 +115,9 @@
       <a name="output" val="true"/>
     </comp>
     <comp loc="(420,230)" name="Complemento"/>
+    <comp loc="(510,460)" name="subComplemento">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp loc="(640,150)" name="fullSum4Bits"/>
   </circuit>
   <circuit name="meioSum">
@@ -361,40 +378,33 @@
     <wire from="(540,290)" to="(540,350)"/>
     <wire from="(540,390)" to="(540,460)"/>
   </circuit>
-  <vhdl name="subComplemento">--------------------------------------------------------------------------------
--- Project :
--- File    :
--- Autor   :
--- Date    :
---
---------------------------------------------------------------------------------
--- Description :
---
---------------------------------------------------------------------------------
-
-LIBRARY ieee;
+  <vhdl name="subComplemento">LIBRARY ieee;
 USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;  -- Para operações com unsigned
 
 ENTITY subComplemento IS
   PORT (
-  ------------------------------------------------------------------------------
-  --Insert input ports below
-    A      : IN  std_logic_vector(3 DOWNTO 0); -- input vector example
-  ------------------------------------------------------------------------------
-  --Insert output ports below
-    B      : OUT std_logic_vector(3 DOWNTO 0)  -- output vector example
-    );
+    A      : IN  std_logic_vector(3 DOWNTO 0);  -- Vetor de entrada A
+    B      : IN  std_logic_vector(3 DOWNTO 0);  -- Vetor de entrada B
+    S      : OUT std_logic_vector(3 DOWNTO 0);  -- Saída (A - B)
+    ov     : OUT std_logic                     -- Overflow
+  );
 END subComplemento;
 
---------------------------------------------------------------------------------
---Complete your VHDL description below
---------------------------------------------------------------------------------
-
 ARCHITECTURE TypeArchitecture OF subComplemento IS
-
+  signal B_complemento : std_logic_vector(3 DOWNTO 0);  -- Armazena o complemento de dois de B
+  signal result        : unsigned(4 DOWNTO 0);         -- Resultado da soma com carry extra
 BEGIN
-	
+  -- Inverter bit a bit B (primeira parte do complemento de dois)
+  B_complemento &lt;= not B;
 
-END TypeArchitecture;
-</vhdl>
+  -- Somar 1 a B_complemento (segunda parte do complemento de dois) e somar com A, ambos estendidos para 5 bits
+  result &lt;= unsigned('0' &amp; A) + unsigned('0' &amp; B_complemento) + 1;
+
+  -- Atribuir os 4 bits menos significativos do resultado à saída S
+  S &lt;= std_logic_vector(result(3 DOWNTO 0));
+
+  -- Detectar overflow (se o carry out do bit mais significativo for 1)
+  ov &lt;= result(4);
+END TypeArchitecture;</vhdl>
 </project>

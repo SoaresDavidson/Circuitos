@@ -411,6 +411,46 @@
     <wire from="(540,290)" to="(540,350)"/>
     <wire from="(540,390)" to="(540,460)"/>
   </circuit>
+  <circuit name="meioSubComplementos">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="meioSubComplementos"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(240,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(420,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(610,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(620,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(90,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="1" loc="(240,270)" name="NOT Gate"/>
+    <comp lib="1" loc="(300,250)" name="XOR Gate"/>
+    <comp lib="1" loc="(610,300)" name="AND Gate"/>
+    <comp lib="1" loc="(620,160)" name="OR Gate"/>
+    <wire from="(300,250)" to="(480,250)"/>
+    <wire from="(420,100)" to="(510,100)"/>
+    <wire from="(480,180)" to="(480,250)"/>
+    <wire from="(480,180)" to="(570,180)"/>
+    <wire from="(480,250)" to="(480,320)"/>
+    <wire from="(480,320)" to="(560,320)"/>
+    <wire from="(510,100)" to="(510,280)"/>
+    <wire from="(510,100)" to="(570,100)"/>
+    <wire from="(510,280)" to="(560,280)"/>
+    <wire from="(570,100)" to="(570,140)"/>
+    <wire from="(90,270)" to="(210,270)"/>
+  </circuit>
   <vhdl name="subComplemento">LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;  -- Para operações com unsigned

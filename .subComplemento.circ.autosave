@@ -56,30 +56,40 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(170,110)" name="Ground"/>
-    <comp lib="0" loc="(200,230)" name="Pin">
+    <comp lib="0" loc="(130,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(200,250)" name="Pin">
+    <comp lib="0" loc="(130,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(200,270)" name="Pin">
+    <comp lib="0" loc="(130,270)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(200,290)" name="Pin">
+    <comp lib="0" loc="(130,290)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(420,150)" name="Pin">
+    <comp lib="0" loc="(180,400)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(280,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(420,170)" name="Pin">
+    <comp lib="0" loc="(330,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(420,190)" name="Pin">
+    <comp lib="0" loc="(370,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(420,210)" name="Pin">
+    <comp lib="0" loc="(390,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(510,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(640,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -102,7 +112,29 @@
       <a name="output" val="true"/>
     </comp>
     <comp loc="(420,230)" name="Complemento"/>
+    <comp loc="(510,460)" name="subComplemento">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp loc="(640,150)" name="fullSum4Bits"/>
+    <wire from="(130,230)" to="(170,230)"/>
+    <wire from="(130,250)" to="(160,250)"/>
+    <wire from="(130,270)" to="(150,270)"/>
+    <wire from="(130,290)" to="(140,290)"/>
+    <wire from="(140,290)" to="(140,380)"/>
+    <wire from="(140,290)" to="(200,290)"/>
+    <wire from="(150,270)" to="(150,380)"/>
+    <wire from="(150,270)" to="(200,270)"/>
+    <wire from="(160,250)" to="(160,380)"/>
+    <wire from="(160,250)" to="(200,250)"/>
+    <wire from="(170,230)" to="(170,380)"/>
+    <wire from="(170,230)" to="(200,230)"/>
+    <wire from="(180,400)" to="(180,480)"/>
+    <wire from="(180,480)" to="(290,480)"/>
+    <wire from="(250,460)" to="(290,460)"/>
+    <wire from="(280,210)" to="(420,210)"/>
+    <wire from="(330,190)" to="(420,190)"/>
+    <wire from="(370,170)" to="(420,170)"/>
+    <wire from="(390,150)" to="(420,150)"/>
   </circuit>
   <circuit name="meioSum">
     <a name="appearance" val="logisim_evolution"/>
@@ -314,12 +346,6 @@
       <a name="label" val="S3"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(540,500)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="label" val="Over"/>
-      <a name="output" val="true"/>
-    </comp>
     <comp loc="(540,160)" name="fullSum"/>
     <comp loc="(540,270)" name="fullSum"/>
     <comp loc="(540,370)" name="fullSum"/>
@@ -362,4 +388,73 @@
     <wire from="(540,290)" to="(540,350)"/>
     <wire from="(540,390)" to="(540,460)"/>
   </circuit>
+  <circuit name="meioSubComplementos">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="meioSubComplementos"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(240,230)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(420,100)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(610,300)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(620,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(90,270)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="1" loc="(240,270)" name="NOT Gate"/>
+    <comp lib="1" loc="(300,250)" name="XOR Gate"/>
+    <comp lib="1" loc="(610,300)" name="AND Gate"/>
+    <comp lib="1" loc="(620,160)" name="OR Gate"/>
+    <wire from="(300,250)" to="(480,250)"/>
+    <wire from="(420,100)" to="(510,100)"/>
+    <wire from="(480,180)" to="(480,250)"/>
+    <wire from="(480,180)" to="(570,180)"/>
+    <wire from="(480,250)" to="(480,320)"/>
+    <wire from="(480,320)" to="(560,320)"/>
+    <wire from="(510,100)" to="(510,280)"/>
+    <wire from="(510,100)" to="(570,100)"/>
+    <wire from="(510,280)" to="(560,280)"/>
+    <wire from="(570,100)" to="(570,140)"/>
+    <wire from="(90,270)" to="(210,270)"/>
+  </circuit>
+  <vhdl name="subComplemento">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+USE ieee.numeric_std.all;  -- Para operações com unsigned
+
+ENTITY subComplemento IS
+  PORT (
+    A      : IN  std_logic_vector(3 DOWNTO 0);  -- Vetor de entrada A
+    B      : IN  std_logic_vector(3 DOWNTO 0);  -- Vetor de entrada B
+    S      : OUT std_logic_vector(3 DOWNTO 0);  -- Saída (A - B)
+    ov     : OUT std_logic                     -- Overflow
+  );
+END subComplemento;
+
+ARCHITECTURE TypeArchitecture OF subComplemento IS
+  signal B_complemento : std_logic_vector(3 DOWNTO 0);  -- Armazena o complemento de dois de B
+  signal result        : unsigned(4 DOWNTO 0);         -- Resultado da soma com carry extra
+BEGIN
+  -- Inverter bit a bit B (primeira parte do complemento de dois)
+  B_complemento &lt;= not B;
+
+  -- Somar 1 a B_complemento (segunda parte do complemento de dois) e somar com A, ambos estendidos para 5 bits
+  result &lt;= unsigned('0' &amp; A) + unsigned('0' &amp; B_complemento) + 1;
+
+  -- Atribuir os 4 bits menos significativos do resultado à saída S
+  S &lt;= std_logic_vector(result(3 DOWNTO 0));
+
+  -- Detectar overflow (se o carry out do bit mais significativo for 1)
+  ov &lt;= result(4);
+END TypeArchitecture;</vhdl>
 </project>

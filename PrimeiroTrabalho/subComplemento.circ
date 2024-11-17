@@ -58,15 +58,19 @@
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(130,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B0"/>
     </comp>
     <comp lib="0" loc="(130,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B1"/>
     </comp>
     <comp lib="0" loc="(130,270)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B2"/>
     </comp>
     <comp lib="0" loc="(130,290)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B3"/>
     </comp>
     <comp lib="0" loc="(180,400)" name="Splitter">
       <a name="facing" val="north"/>
@@ -79,47 +83,58 @@
     </comp>
     <comp lib="0" loc="(280,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A3"/>
     </comp>
     <comp lib="0" loc="(330,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A2"/>
     </comp>
     <comp lib="0" loc="(370,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A1"/>
     </comp>
     <comp lib="0" loc="(390,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
-    </comp>
-    <comp lib="0" loc="(510,460)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
+      <a name="label" val="A0"/>
     </comp>
     <comp lib="0" loc="(640,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S0"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(640,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S1"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(640,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S2"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(640,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S3"/>
       <a name="output" val="true"/>
     </comp>
+    <comp lib="0" loc="(720,510)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp loc="(420,230)" name="Complemento"/>
-    <comp loc="(510,460)" name="subComplemento">
+    <comp loc="(500,530)" name="complemento_vhdl">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <comp loc="(640,150)" name="fullSum4Bits"/>
+    <comp loc="(720,510)" name="somador_vhdl">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <wire from="(130,230)" to="(170,230)"/>
     <wire from="(130,250)" to="(160,250)"/>
     <wire from="(130,270)" to="(150,270)"/>
@@ -132,8 +147,8 @@
     <wire from="(160,250)" to="(200,250)"/>
     <wire from="(170,230)" to="(170,380)"/>
     <wire from="(170,230)" to="(200,230)"/>
-    <wire from="(180,400)" to="(180,480)"/>
-    <wire from="(180,480)" to="(290,480)"/>
+    <wire from="(180,400)" to="(180,530)"/>
+    <wire from="(180,530)" to="(280,530)"/>
     <wire from="(250,410)" to="(250,460)"/>
     <wire from="(250,460)" to="(290,460)"/>
     <wire from="(270,370)" to="(710,370)"/>
@@ -143,6 +158,8 @@
     <wire from="(280,210)" to="(420,210)"/>
     <wire from="(280,70)" to="(280,210)"/>
     <wire from="(280,70)" to="(730,70)"/>
+    <wire from="(290,460)" to="(290,500)"/>
+    <wire from="(290,500)" to="(490,500)"/>
     <wire from="(330,190)" to="(420,190)"/>
     <wire from="(330,80)" to="(330,190)"/>
     <wire from="(330,80)" to="(720,80)"/>
@@ -154,6 +171,8 @@
     <wire from="(410,100)" to="(410,150)"/>
     <wire from="(410,100)" to="(710,100)"/>
     <wire from="(410,150)" to="(420,150)"/>
+    <wire from="(490,500)" to="(490,510)"/>
+    <wire from="(490,510)" to="(500,510)"/>
     <wire from="(700,110)" to="(700,380)"/>
     <wire from="(710,100)" to="(710,370)"/>
     <wire from="(720,80)" to="(720,390)"/>
@@ -460,7 +479,7 @@ ENTITY subComplemento IS
     A      : IN  std_logic_vector(3 DOWNTO 0);  -- Vetor de entrada A
     B      : IN  std_logic_vector(3 DOWNTO 0);  -- Vetor de entrada B
     S      : OUT std_logic_vector(3 DOWNTO 0);  -- Saída (A - B)
-    ov     : OUT std_logic                     -- Overflow
+    ov : OUT std_logic
   );
 END subComplemento;
 
@@ -476,8 +495,89 @@ BEGIN
 
   -- Atribuir os 4 bits menos significativos do resultado à saída S
   S &lt;= std_logic_vector(result(3 DOWNTO 0));
+  ov &lt;= result(4);  -- Detectar overflow (se o carry out do bit mais significativo for 1)
+END TypeArchitecture;</vhdl>
+  <vhdl name="complemento_vhdl">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+-- Implementa o complemento de 2 de um vetor de entrada de 4 bits.
+--------------------------------------------------------------------------------
 
-  -- Detectar overflow (se o carry out do bit mais significativo for 1)
-  ov &lt;= result(4);
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY complemento_vhdl IS
+  PORT (
+    ----------------------------------------------------------------------------
+    -- Insert input ports below
+    B      : IN  std_logic_vector(3 DOWNTO 0); -- input vector example
+    ----------------------------------------------------------------------------
+    -- Insert output ports below
+    S      : OUT std_logic_vector(3 DOWNTO 0)  -- Saída para o complemento de 2
+  );
+END complemento_vhdl;
+
+ARCHITECTURE TypeArchitecture OF complemento_vhdl IS
+
+  signal B_complemento : std_logic_vector(3 DOWNTO 0); -- Complemento de 1 de B
+  signal carry         : std_logic_vector(3 DOWNTO 0); -- Sinal de carry
+
+BEGIN
+
+  -- Calcula o complemento de 1 de B
+  B_complemento &lt;= NOT B;
+
+  -- Calcula o complemento de 2 ao adicionar 1 ao complemento de 1
+  carry(0) &lt;= '1'; -- Inicia com 1 para fazer complemento de 2
+  S(0) &lt;= B_complemento(0) XOR carry(0);
+  carry(1) &lt;= (B_complemento(0) AND carry(0));
+  S(1) &lt;= B_complemento(1) XOR carry(1);
+  carry(2) &lt;= (B_complemento(1) AND carry(1));
+  S(2) &lt;= B_complemento(2) XOR carry(2);
+  carry(3) &lt;= (B_complemento(2) AND carry(2));
+  S(3) &lt;= B_complemento(3) XOR carry(3);
+
+END TypeArchitecture;</vhdl>
+  <vhdl name="somador_vhdl">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY somador_vhdl IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    A      : IN  std_logic_vector(3 DOWNTO 0);                   -- input bit example
+    B       : IN  std_logic_vector(3 DOWNTO 0); -- input vector example
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+                  -- output bit example
+    S        : OUT std_logic_vector(3 DOWNTO 0)
+    
+    );
+END somador_vhdl;
+
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF somador_vhdl IS
+signal carry : std_logic_vector(3 DOWNTO 0);
+BEGIN
+
+S(0) &lt;= A(0) xor B(0);
+carry(1) &lt;= A(0) and B(0);
+S(1) &lt;= ((A(1) xor carry(1)) xor B(1));
+carry(2) &lt;= (A(1) and carry(1)) or (B(1) and (A(1) xor carry(1)));
+S(2) &lt;= ((A(2) xor carry(2)) xor B(2));
+carry(3) &lt;= (A(2) and carry(2)) or (B(2) and (A(2) xor carry(2)));
+S(3) &lt;= ((A(3) xor carry(3)) xor B(3));
+
+
+
 END TypeArchitecture;</vhdl>
 </project>

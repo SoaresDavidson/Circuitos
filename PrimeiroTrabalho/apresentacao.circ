@@ -68,13 +68,13 @@
       <a name="output" val="true"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(1200,570)" name="Pin">
+    <comp lib="0" loc="(1190,490)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="5"/>
     </comp>
-    <comp lib="0" loc="(1240,510)" name="Pin">
+    <comp lib="0" loc="(1200,570)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -121,9 +121,10 @@
     <comp loc="(1010,240)" name="subtrator_4_bits_vhdl">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp loc="(1030,530)" name="Complemento"/>
-    <comp loc="(1200,570)" name="somador_4_bits"/>
-    <comp loc="(1240,510)" name="somador_4_bits"/>
+    <comp loc="(1190,490)" name="somador_4_bits"/>
+    <comp loc="(1200,570)" name="somador_vhdl">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp loc="(370,110)" name="somador_4_bits"/>
     <comp loc="(370,200)" name="somador_vhdl">
       <a name="appearance" val="logisim_evolution"/>
@@ -132,9 +133,10 @@
     <comp loc="(370,410)" name="sumSubVHDL">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp loc="(980,590)" name="complemento_vhdl">
+    <comp loc="(910,570)" name="complemento_vhdl">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
+    <comp loc="(960,510)" name="Complemento"/>
     <wire from="(100,130)" to="(100,220)"/>
     <wire from="(100,130)" to="(140,130)"/>
     <wire from="(100,220)" to="(100,320)"/>
@@ -143,9 +145,8 @@
     <wire from="(100,320)" to="(150,320)"/>
     <wire from="(100,430)" to="(100,600)"/>
     <wire from="(100,430)" to="(150,430)"/>
-    <wire from="(100,600)" to="(750,600)"/>
+    <wire from="(100,600)" to="(680,600)"/>
     <wire from="(1010,240)" to="(1020,240)"/>
-    <wire from="(1020,510)" to="(1030,510)"/>
     <wire from="(120,110)" to="(120,200)"/>
     <wire from="(120,110)" to="(150,110)"/>
     <wire from="(120,200)" to="(120,300)"/>
@@ -159,6 +160,14 @@
     <wire from="(150,70)" to="(150,110)"/>
     <wire from="(150,70)" to="(730,70)"/>
     <wire from="(60,340)" to="(80,340)"/>
+    <wire from="(680,570)" to="(680,600)"/>
+    <wire from="(680,570)" to="(690,570)"/>
+    <wire from="(690,480)" to="(690,510)"/>
+    <wire from="(690,480)" to="(760,480)"/>
+    <wire from="(690,510)" to="(740,510)"/>
+    <wire from="(710,490)" to="(710,550)"/>
+    <wire from="(710,490)" to="(780,490)"/>
+    <wire from="(710,550)" to="(980,550)"/>
     <wire from="(730,60)" to="(730,70)"/>
     <wire from="(730,60)" to="(740,60)"/>
     <wire from="(740,110)" to="(740,240)"/>
@@ -169,24 +178,26 @@
     <wire from="(740,60)" to="(740,110)"/>
     <wire from="(750,40)" to="(750,50)"/>
     <wire from="(750,40)" to="(760,40)"/>
-    <wire from="(750,590)" to="(750,600)"/>
-    <wire from="(750,590)" to="(760,590)"/>
     <wire from="(760,130)" to="(760,260)"/>
     <wire from="(760,130)" to="(780,130)"/>
-    <wire from="(760,260)" to="(760,530)"/>
+    <wire from="(760,260)" to="(760,480)"/>
     <wire from="(760,260)" to="(790,260)"/>
     <wire from="(760,40)" to="(760,130)"/>
-    <wire from="(760,530)" to="(810,530)"/>
-    <wire from="(780,240)" to="(780,570)"/>
+    <wire from="(780,240)" to="(780,490)"/>
     <wire from="(780,240)" to="(790,240)"/>
-    <wire from="(780,570)" to="(980,570)"/>
     <wire from="(80,110)" to="(120,110)"/>
     <wire from="(80,340)" to="(150,340)"/>
     <wire from="(80,340)" to="(80,450)"/>
     <wire from="(80,450)" to="(150,450)"/>
     <wire from="(90,130)" to="(100,130)"/>
-    <wire from="(980,310)" to="(980,510)"/>
-    <wire from="(980,510)" to="(1020,510)"/>
+    <wire from="(910,470)" to="(910,490)"/>
+    <wire from="(910,470)" to="(980,470)"/>
+    <wire from="(910,490)" to="(970,490)"/>
+    <wire from="(910,570)" to="(910,590)"/>
+    <wire from="(910,590)" to="(980,590)"/>
+    <wire from="(960,510)" to="(970,510)"/>
+    <wire from="(980,310)" to="(980,470)"/>
+    <wire from="(980,550)" to="(980,570)"/>
   </circuit>
   <circuit name="meioSum">
     <a name="appearance" val="logisim_evolution"/>
@@ -1220,7 +1231,7 @@ BEGIN
 	S(4) &lt;= (B(3) AND ((M XOR A(3)) XOR C(3))) OR ((M XOR A(3)) AND C(3));
 	
 END TypeArchitecture;</vhdl>
-  <vhdl name="subComplementoVHDL">LIBRARY ieee;
+  <vhdl name="subComplemento">LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.all;  -- Para operações com unsigned
 
@@ -1238,16 +1249,15 @@ ARCHITECTURE TypeArchitecture OF subComplemento IS
   signal result        : unsigned(4 DOWNTO 0);         -- Resultado da soma com carry extra
 BEGIN
   -- Inverter bit a bit B (primeira parte do complemento de dois)
-  B_complemento &amp;lt;= not B;
+  B_complemento &lt;= not B;
 
   -- Somar 1 a B_complemento (segunda parte do complemento de dois) e somar com A, ambos estendidos para 5 bits
-  result &amp;lt;= unsigned('0' &amp;amp; A) + unsigned('0' &amp;amp; B_complemento) + 1;
+  result &lt;= unsigned('0' &amp; A) + unsigned('0' &amp; B_complemento) + 1;
 
   -- Atribuir os 4 bits menos significativos do resultado à saída S
-  S &amp;lt;= std_logic_vector(result(3 DOWNTO 0));
+  S &lt;= std_logic_vector(result(3 DOWNTO 0));
 
   -- Detectar overflow (se o carry out do bit mais significativo for 1)
-  ov &amp;lt;= result(4);
-  
+  ov &lt;= result(4);
 END TypeArchitecture;</vhdl>
 </project>

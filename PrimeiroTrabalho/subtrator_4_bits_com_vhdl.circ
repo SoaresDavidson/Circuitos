@@ -328,12 +328,12 @@
       <a name="width" val="4"/>
     </comp>
     <comp loc="(610,270)" name="sub_4_bits"/>
-    <comp loc="(630,580)" name="subtrator_4_bits_vhdl">
+    <comp loc="(620,580)" name="subtrator_4_bits_vhdl">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(150,160)" to="(150,580)"/>
     <wire from="(150,160)" to="(340,160)"/>
-    <wire from="(150,580)" to="(410,580)"/>
+    <wire from="(150,580)" to="(400,580)"/>
     <wire from="(270,210)" to="(300,210)"/>
     <wire from="(270,240)" to="(290,240)"/>
     <wire from="(270,280)" to="(280,280)"/>
@@ -375,7 +375,8 @@
     <wire from="(380,180)" to="(380,330)"/>
     <wire from="(380,330)" to="(390,330)"/>
     <wire from="(380,510)" to="(380,600)"/>
-    <wire from="(380,600)" to="(410,600)"/>
+    <wire from="(380,600)" to="(400,600)"/>
+    <wire from="(620,580)" to="(630,580)"/>
   </circuit>
   <vhdl name="subtrator_4_bits_vhdl">LIBRARY ieee;
 USE ieee.std_logic_1164.all;

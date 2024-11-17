@@ -58,18 +58,23 @@
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(190,110)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="M"/>
     </comp>
     <comp lib="0" loc="(190,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B0"/>
     </comp>
     <comp lib="0" loc="(190,230)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B1"/>
     </comp>
     <comp lib="0" loc="(190,250)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B2"/>
     </comp>
     <comp lib="0" loc="(190,270)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="B3"/>
     </comp>
     <comp lib="0" loc="(260,480)" name="Splitter">
       <a name="facing" val="north"/>
@@ -78,15 +83,19 @@
     </comp>
     <comp lib="0" loc="(280,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A3"/>
     </comp>
     <comp lib="0" loc="(290,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A2"/>
     </comp>
     <comp lib="0" loc="(300,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A1"/>
     </comp>
     <comp lib="0" loc="(310,130)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="A0"/>
     </comp>
     <comp lib="0" loc="(320,420)" name="Splitter">
       <a name="facing" val="north"/>

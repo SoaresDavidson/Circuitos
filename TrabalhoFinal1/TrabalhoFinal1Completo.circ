@@ -78,16 +78,52 @@
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(570,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(570,260)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,280)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="8" loc="(190,420)" name="Text">
+      <a name="text" val="100 or"/>
+    </comp>
+    <comp lib="8" loc="(190,450)" name="Text">
+      <a name="text" val="101 comparador"/>
+    </comp>
+    <comp lib="8" loc="(190,475)" name="Text">
+      <a name="text" val="110 deslocamento"/>
+    </comp>
+    <comp lib="8" loc="(195,310)" name="Text">
+      <a name="text" val="000 soma"/>
+    </comp>
+    <comp lib="8" loc="(195,390)" name="Text">
+      <a name="text" val="011 and"/>
+    </comp>
+    <comp lib="8" loc="(195,505)" name="Text">
+      <a name="text" val="111 detector de zero"/>
+    </comp>
+    <comp lib="8" loc="(200,340)" name="Text">
+      <a name="text" val="001 subtração"/>
+    </comp>
+    <comp lib="8" loc="(210,365)" name="Text">
+      <a name="text" val="010 sub por complemento"/>
     </comp>
     <comp loc="(570,150)" name="TrabalhoFinal1"/>
-    <comp loc="(570,260)" name="trabalhoFinal1VHDL"/>
+    <comp loc="(570,260)" name="completoVHDL">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <wire from="(260,210)" to="(300,210)"/>
     <wire from="(300,210)" to="(300,320)"/>
     <wire from="(300,210)" to="(350,210)"/>
@@ -110,11 +146,13 @@
     <comp lib="0" loc="(1120,430)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(150,480)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="Sel"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(150,480)" name="Splitter">
@@ -138,29 +176,35 @@
       <a name="label" val="A"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(890,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OV"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="1" loc="(1120,430)" name="OR Gate">
       <a name="inputs" val="8"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp loc="(390,410)" name="Demux3"/>
     <comp loc="(890,140)" name="somador_4_bits_enable"/>
     <comp loc="(890,230)" name="subENABLER"/>
     <comp loc="(890,320)" name="subComplementoENABLER"/>
     <comp loc="(890,400)" name="andENABLER"/>
-    <comp loc="(890,510)" name="ORENABLER"/>
-    <comp loc="(890,610)" name="deslocamento"/>
-    <comp loc="(890,700)" name="comparadorENABLER"/>
-    <comp loc="(890,790)" name="DetectorDeZero"/>
+    <comp loc="(890,490)" name="ORENABLER"/>
+    <comp loc="(890,580)" name="comparadorENABLER"/>
+    <comp loc="(890,670)" name="deslocamento"/>
+    <comp loc="(890,760)" name="DetectorDeZero"/>
     <wire from="(1010,400)" to="(1010,420)"/>
     <wire from="(1010,420)" to="(1070,420)"/>
-    <wire from="(1020,460)" to="(1020,700)"/>
+    <wire from="(1020,460)" to="(1020,670)"/>
     <wire from="(1020,460)" to="(1070,460)"/>
     <wire from="(1030,320)" to="(1030,410)"/>
     <wire from="(1030,410)" to="(1070,410)"/>
     <wire from="(1040,230)" to="(1040,400)"/>
     <wire from="(1040,400)" to="(1070,400)"/>
     <wire from="(1070,140)" to="(1070,390)"/>
-    <wire from="(1070,470)" to="(1070,790)"/>
+    <wire from="(1070,470)" to="(1070,770)"/>
     <wire from="(390,180)" to="(390,410)"/>
     <wire from="(390,180)" to="(670,180)"/>
     <wire from="(390,430)" to="(570,430)"/>
@@ -169,16 +213,16 @@
     <wire from="(390,490)" to="(580,490)"/>
     <wire from="(390,510)" to="(570,510)"/>
     <wire from="(390,530)" to="(560,530)"/>
-    <wire from="(390,550)" to="(390,810)"/>
-    <wire from="(390,810)" to="(670,810)"/>
+    <wire from="(390,550)" to="(390,780)"/>
+    <wire from="(390,780)" to="(670,780)"/>
     <wire from="(500,90)" to="(650,90)"/>
     <wire from="(540,60)" to="(660,60)"/>
-    <wire from="(560,530)" to="(560,740)"/>
-    <wire from="(560,740)" to="(670,740)"/>
+    <wire from="(560,530)" to="(560,710)"/>
+    <wire from="(560,710)" to="(670,710)"/>
     <wire from="(570,270)" to="(570,430)"/>
     <wire from="(570,270)" to="(670,270)"/>
-    <wire from="(570,510)" to="(570,650)"/>
-    <wire from="(570,650)" to="(670,650)"/>
+    <wire from="(570,510)" to="(570,620)"/>
+    <wire from="(570,620)" to="(670,620)"/>
     <wire from="(580,490)" to="(580,550)"/>
     <wire from="(580,550)" to="(670,550)"/>
     <wire from="(630,360)" to="(630,450)"/>
@@ -189,13 +233,13 @@
     <wire from="(650,250)" to="(670,250)"/>
     <wire from="(650,340)" to="(650,420)"/>
     <wire from="(650,340)" to="(670,340)"/>
-    <wire from="(650,420)" to="(650,530)"/>
+    <wire from="(650,420)" to="(650,510)"/>
     <wire from="(650,420)" to="(670,420)"/>
-    <wire from="(650,530)" to="(650,630)"/>
-    <wire from="(650,530)" to="(670,530)"/>
-    <wire from="(650,630)" to="(650,720)"/>
-    <wire from="(650,630)" to="(670,630)"/>
-    <wire from="(650,720)" to="(670,720)"/>
+    <wire from="(650,510)" to="(650,600)"/>
+    <wire from="(650,510)" to="(670,510)"/>
+    <wire from="(650,600)" to="(650,690)"/>
+    <wire from="(650,600)" to="(670,600)"/>
+    <wire from="(650,690)" to="(670,690)"/>
     <wire from="(650,90)" to="(650,160)"/>
     <wire from="(660,140)" to="(660,230)"/>
     <wire from="(660,140)" to="(670,140)"/>
@@ -203,29 +247,32 @@
     <wire from="(660,230)" to="(670,230)"/>
     <wire from="(660,320)" to="(660,400)"/>
     <wire from="(660,320)" to="(670,320)"/>
-    <wire from="(660,400)" to="(660,510)"/>
+    <wire from="(660,400)" to="(660,490)"/>
     <wire from="(660,400)" to="(670,400)"/>
-    <wire from="(660,510)" to="(660,610)"/>
-    <wire from="(660,510)" to="(670,510)"/>
+    <wire from="(660,490)" to="(660,580)"/>
+    <wire from="(660,490)" to="(670,490)"/>
+    <wire from="(660,580)" to="(660,670)"/>
+    <wire from="(660,580)" to="(670,580)"/>
     <wire from="(660,60)" to="(660,140)"/>
-    <wire from="(660,610)" to="(660,700)"/>
-    <wire from="(660,610)" to="(670,610)"/>
-    <wire from="(660,700)" to="(660,790)"/>
-    <wire from="(660,700)" to="(670,700)"/>
-    <wire from="(660,790)" to="(670,790)"/>
+    <wire from="(660,670)" to="(660,760)"/>
+    <wire from="(660,670)" to="(670,670)"/>
+    <wire from="(660,760)" to="(670,760)"/>
     <wire from="(670,440)" to="(670,470)"/>
+    <wire from="(670,530)" to="(670,550)"/>
+    <wire from="(670,690)" to="(680,690)"/>
     <wire from="(890,140)" to="(1070,140)"/>
     <wire from="(890,230)" to="(1040,230)"/>
     <wire from="(890,320)" to="(1030,320)"/>
     <wire from="(890,400)" to="(1010,400)"/>
-    <wire from="(890,510)" to="(900,510)"/>
-    <wire from="(890,610)" to="(970,610)"/>
-    <wire from="(890,700)" to="(1020,700)"/>
-    <wire from="(890,790)" to="(1070,790)"/>
+    <wire from="(890,490)" to="(900,490)"/>
+    <wire from="(890,580)" to="(970,580)"/>
+    <wire from="(890,670)" to="(1020,670)"/>
+    <wire from="(890,760)" to="(890,770)"/>
+    <wire from="(890,770)" to="(1070,770)"/>
     <wire from="(900,440)" to="(1070,440)"/>
-    <wire from="(900,440)" to="(900,510)"/>
+    <wire from="(900,440)" to="(900,490)"/>
     <wire from="(970,450)" to="(1070,450)"/>
-    <wire from="(970,450)" to="(970,610)"/>
+    <wire from="(970,450)" to="(970,580)"/>
   </circuit>
   <circuit name="trabalhoFinal1VHDL">
     <a name="appearance" val="logisim_evolution"/>
@@ -278,10 +325,10 @@
     <comp loc="(780,500)" name="ORVHDL">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp loc="(780,590)" name="DeslocadorVHDL">
+    <comp loc="(780,590)" name="ComparadorVHDL">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp loc="(780,680)" name="ComparadorVHDL">
+    <comp loc="(780,680)" name="DeslocadorVHDL">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <comp loc="(780,770)" name="DetectorDeZeroVHDL">
@@ -394,11 +441,16 @@
       <a name="label" val="B"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(580,200)" name="Pin">
+    <comp lib="0" loc="(580,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(600,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(260,180)" name="AND Gate">
       <a name="width" val="4"/>
@@ -420,6 +472,7 @@
     <wire from="(260,200)" to="(360,200)"/>
     <wire from="(260,220)" to="(260,290)"/>
     <wire from="(260,220)" to="(360,220)"/>
+    <wire from="(580,200)" to="(600,200)"/>
   </circuit>
   <circuit name="subENABLER">
     <a name="appearance" val="logisim_evolution"/>
@@ -441,31 +494,11 @@
       <a name="label" val="B"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(620,240)" name="Splitter">
-      <a name="bit0" val="3"/>
-      <a name="bit1" val="2"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="0"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(640,190)" name="Ground">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(660,180)" name="Pin">
+    <comp lib="0" loc="(620,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(660,180)" name="Splitter">
-      <a name="bit0" val="4"/>
-      <a name="bit1" val="3"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="0"/>
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(90,380)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -514,22 +547,12 @@
       <a name="label" val="B"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(610,220)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(630,220)" name="Ground"/>
-    <comp lib="0" loc="(650,170)" name="Pin">
+    <comp lib="0" loc="(610,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(650,170)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(270,280)" name="AND Gate">
       <a name="size" val="30"/>
@@ -566,6 +589,7 @@
     </comp>
     <comp lib="0" loc="(150,360)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="ENABLER"/>
     </comp>
     <comp lib="0" loc="(230,260)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -577,31 +601,11 @@
       <a name="label" val="A"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(540,240)" name="Splitter">
-      <a name="bit0" val="3"/>
-      <a name="bit1" val="2"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="0"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(560,190)" name="Ground">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(580,180)" name="Pin">
+    <comp lib="0" loc="(540,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(580,180)" name="Splitter">
-      <a name="bit0" val="4"/>
-      <a name="bit1" val="3"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="0"/>
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(260,270)" name="AND Gate">
       <a name="size" val="30"/>
@@ -638,6 +642,7 @@
     </comp>
     <comp lib="0" loc="(120,300)" name="Pin">
       <a name="appearance" val="NewPins"/>
+      <a name="label" val="ENABLER"/>
     </comp>
     <comp lib="0" loc="(200,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -649,31 +654,11 @@
       <a name="label" val="A"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(510,180)" name="Splitter">
-      <a name="bit0" val="3"/>
-      <a name="bit1" val="2"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="0"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(530,130)" name="Ground">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(550,120)" name="Pin">
+    <comp lib="0" loc="(510,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(550,120)" name="Splitter">
-      <a name="bit0" val="4"/>
-      <a name="bit1" val="3"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="0"/>
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(230,210)" name="AND Gate">
       <a name="size" val="30"/>
@@ -703,44 +688,73 @@
     <a name="circuit" val="comparadorENABLER"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(290,180)" name="Pin">
+    <comp lib="0" loc="(120,340)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ENABLER"/>
+    </comp>
+    <comp lib="0" loc="(150,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(290,200)" name="Pin">
+    <comp lib="0" loc="(150,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="B"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(550,270)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="ENABLER"/>
+    <comp lib="0" loc="(180,300)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
     <comp lib="0" loc="(660,270)" name="Ground"/>
     <comp lib="0" loc="(680,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="0" loc="(680,170)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
       <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="1" loc="(180,170)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="1" loc="(180,210)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="width" val="4"/>
     </comp>
     <comp lib="1" loc="(620,200)" name="AND Gate"/>
     <comp loc="(510,180)" name="Comparador"/>
+    <wire from="(120,340)" to="(220,340)"/>
+    <wire from="(150,150)" to="(150,160)"/>
+    <wire from="(150,220)" to="(150,250)"/>
+    <wire from="(150,250)" to="(150,300)"/>
+    <wire from="(150,300)" to="(180,300)"/>
+    <wire from="(180,170)" to="(290,170)"/>
+    <wire from="(180,210)" to="(290,210)"/>
+    <wire from="(190,310)" to="(190,320)"/>
+    <wire from="(190,320)" to="(200,320)"/>
+    <wire from="(200,320)" to="(210,320)"/>
+    <wire from="(210,320)" to="(220,320)"/>
+    <wire from="(220,320)" to="(220,340)"/>
+    <wire from="(220,340)" to="(570,340)"/>
+    <wire from="(290,170)" to="(290,180)"/>
+    <wire from="(290,200)" to="(290,210)"/>
     <wire from="(510,180)" to="(570,180)"/>
-    <wire from="(550,270)" to="(570,270)"/>
-    <wire from="(570,220)" to="(570,270)"/>
+    <wire from="(570,220)" to="(570,340)"/>
+    <wire from="(60,150)" to="(150,150)"/>
+    <wire from="(60,150)" to="(60,250)"/>
+    <wire from="(60,250)" to="(150,250)"/>
     <wire from="(620,180)" to="(620,200)"/>
     <wire from="(620,180)" to="(660,180)"/>
     <wire from="(660,200)" to="(660,220)"/>
     <wire from="(660,220)" to="(660,240)"/>
-    <wire from="(660,240)" to="(660,260)"/>
-    <wire from="(660,260)" to="(660,270)"/>
+    <wire from="(660,240)" to="(660,270)"/>
   </circuit>
   <circuit name="DetectorDeZero">
     <a name="appearance" val="logisim_evolution"/>
@@ -761,52 +775,81 @@
       <a name="incoming" val="4"/>
       <a name="spacing" val="2"/>
     </comp>
-    <comp lib="0" loc="(300,240)" name="Pin">
+    <comp lib="0" loc="(110,300)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="enabler"/>
     </comp>
-    <comp lib="0" loc="(440,220)" name="Ground">
+    <comp lib="0" loc="(850,230)" name="Ground">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="0" loc="(440,230)" name="Ground">
+    <comp lib="0" loc="(850,240)" name="Ground">
       <a name="facing" val="west"/>
     </comp>
-    <comp lib="0" loc="(440,240)" name="Ground">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(440,250)" name="Ground">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(460,200)" name="Pin">
+    <comp lib="0" loc="(870,210)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(460,200)" name="Splitter">
+    <comp lib="0" loc="(870,210)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
-    <comp lib="1" loc="(270,200)" name="OR Gate">
+    <comp lib="1" loc="(180,150)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(180,180)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(180,210)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(180,240)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="1" loc="(680,210)" name="OR Gate">
       <a name="inputs" val="4"/>
     </comp>
-    <comp lib="1" loc="(300,200)" name="NOT Gate"/>
-    <comp lib="1" loc="(350,220)" name="AND Gate"/>
-    <wire from="(120,160)" to="(160,160)"/>
-    <wire from="(120,180)" to="(150,180)"/>
-    <wire from="(120,200)" to="(150,200)"/>
-    <wire from="(120,220)" to="(220,220)"/>
-    <wire from="(150,180)" to="(150,190)"/>
-    <wire from="(150,190)" to="(220,190)"/>
-    <wire from="(150,200)" to="(150,210)"/>
-    <wire from="(150,210)" to="(220,210)"/>
-    <wire from="(160,160)" to="(160,180)"/>
-    <wire from="(160,180)" to="(220,180)"/>
-    <wire from="(350,220)" to="(390,220)"/>
-    <wire from="(390,210)" to="(390,220)"/>
-    <wire from="(390,210)" to="(440,210)"/>
+    <comp lib="1" loc="(710,210)" name="NOT Gate"/>
+    <comp lib="1" loc="(760,230)" name="AND Gate"/>
+    <wire from="(110,250)" to="(110,300)"/>
+    <wire from="(110,250)" to="(140,250)"/>
+    <wire from="(110,300)" to="(560,300)"/>
+    <wire from="(120,160)" to="(150,160)"/>
+    <wire from="(120,180)" to="(120,190)"/>
+    <wire from="(120,190)" to="(150,190)"/>
+    <wire from="(120,200)" to="(130,200)"/>
+    <wire from="(120,220)" to="(120,230)"/>
+    <wire from="(120,230)" to="(150,230)"/>
+    <wire from="(130,200)" to="(130,220)"/>
+    <wire from="(130,220)" to="(150,220)"/>
+    <wire from="(140,140)" to="(140,170)"/>
+    <wire from="(140,140)" to="(150,140)"/>
+    <wire from="(140,170)" to="(140,200)"/>
+    <wire from="(140,170)" to="(150,170)"/>
+    <wire from="(140,200)" to="(140,250)"/>
+    <wire from="(140,200)" to="(150,200)"/>
+    <wire from="(140,250)" to="(150,250)"/>
+    <wire from="(180,150)" to="(630,150)"/>
+    <wire from="(180,180)" to="(590,180)"/>
+    <wire from="(180,210)" to="(520,210)"/>
+    <wire from="(180,240)" to="(630,240)"/>
+    <wire from="(520,210)" to="(520,220)"/>
+    <wire from="(520,220)" to="(630,220)"/>
+    <wire from="(560,300)" to="(560,310)"/>
+    <wire from="(560,310)" to="(570,310)"/>
+    <wire from="(570,250)" to="(570,310)"/>
+    <wire from="(570,250)" to="(710,250)"/>
+    <wire from="(590,180)" to="(590,200)"/>
+    <wire from="(590,200)" to="(630,200)"/>
+    <wire from="(630,150)" to="(630,190)"/>
+    <wire from="(630,230)" to="(630,240)"/>
+    <wire from="(760,230)" to="(800,230)"/>
+    <wire from="(800,220)" to="(800,230)"/>
+    <wire from="(800,220)" to="(850,220)"/>
+    <wire from="(850,240)" to="(850,250)"/>
   </circuit>
   <circuit name="deslocamento">
     <a name="appearance" val="logisim_evolution"/>
@@ -827,35 +870,27 @@
       <a name="facing" val="west"/>
       <a name="spacing" val="2"/>
     </comp>
+    <comp lib="0" loc="(350,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="ENABLER"/>
+    </comp>
     <comp lib="0" loc="(360,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="A"/>
       <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(360,280)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="label" val="ENABLER"/>
-    </comp>
-    <comp lib="0" loc="(580,240)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(600,240)" name="Ground"/>
-    <comp lib="0" loc="(620,190)" name="Pin">
+    <comp lib="0" loc="(580,240)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="S"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
-    </comp>
-    <comp lib="0" loc="(620,190)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="width" val="4"/>
     </comp>
     <comp loc="(580,240)" name="deslocador"/>
     <wire from="(170,260)" to="(170,290)"/>
     <wire from="(170,260)" to="(360,260)"/>
+    <wire from="(350,410)" to="(360,410)"/>
+    <wire from="(360,280)" to="(360,410)"/>
   </circuit>
   <circuit name="somador_4_bits">
     <a name="appearance" val="logisim_evolution"/>
@@ -894,14 +929,21 @@
     <comp lib="0" loc="(870,190)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="S"/>
       <a name="output" val="true"/>
-      <a name="width" val="5"/>
+      <a name="width" val="4"/>
     </comp>
-    <comp lib="0" loc="(870,220)" name="Splitter">
+    <comp lib="0" loc="(890,220)" name="Splitter">
       <a name="facing" val="south"/>
-      <a name="fanout" val="5"/>
-      <a name="incoming" val="5"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
       <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(960,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OV"/>
+      <a name="output" val="true"/>
     </comp>
     <comp loc="(690,350)" name="meiaSoma"/>
     <comp loc="(690,490)" name="meiaSoma"/>
@@ -985,10 +1027,12 @@
     <wire from="(690,730)" to="(910,730)"/>
     <wire from="(690,740)" to="(690,750)"/>
     <wire from="(690,740)" to="(850,740)"/>
+    <wire from="(810,210)" to="(810,270)"/>
+    <wire from="(810,210)" to="(950,210)"/>
+    <wire from="(810,270)" to="(850,270)"/>
     <wire from="(850,270)" to="(850,740)"/>
-    <wire from="(850,270)" to="(880,270)"/>
     <wire from="(870,190)" to="(870,220)"/>
-    <wire from="(880,240)" to="(880,270)"/>
+    <wire from="(870,220)" to="(890,220)"/>
     <wire from="(90,750)" to="(290,750)"/>
     <wire from="(90,770)" to="(110,770)"/>
     <wire from="(90,790)" to="(130,790)"/>
@@ -1001,6 +1045,8 @@
     <wire from="(920,270)" to="(970,270)"/>
     <wire from="(940,240)" to="(940,260)"/>
     <wire from="(940,260)" to="(1030,260)"/>
+    <wire from="(950,200)" to="(950,210)"/>
+    <wire from="(950,200)" to="(960,200)"/>
     <wire from="(960,240)" to="(960,250)"/>
     <wire from="(960,250)" to="(1080,250)"/>
     <wire from="(970,270)" to="(970,620)"/>
@@ -1151,6 +1197,10 @@
     <comp lib="0" loc="(100,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
+    <comp lib="0" loc="(260,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="4"/>
+    </comp>
     <comp lib="0" loc="(280,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Entrada2"/>
@@ -1169,6 +1219,9 @@
     </comp>
     <comp lib="1" loc="(330,220)" name="AND Gate"/>
     <comp lib="1" loc="(530,170)" name="OR Gate"/>
+    <comp loc="(480,390)" name="DeslocadorVHDL">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <wire from="(100,120)" to="(100,240)"/>
     <wire from="(100,120)" to="(270,120)"/>
     <wire from="(100,240)" to="(100,280)"/>
@@ -1304,7 +1357,8 @@
     <wire from="(520,200)" to="(680,200)"/>
     <wire from="(520,70)" to="(520,180)"/>
     <wire from="(670,430)" to="(680,430)"/>
-    <wire from="(680,220)" to="(680,430)"/>
+    <wire from="(680,220)" to="(680,240)"/>
+    <wire from="(680,240)" to="(680,430)"/>
   </circuit>
   <circuit name="Demux">
     <a name="appearance" val="logisim_evolution"/>
@@ -2489,7 +2543,7 @@ END ComparadorVHDL;
 
 ARCHITECTURE TypeArchitecture OF ComparadorVHDL IS
 BEGIN
-  process(A, B)
+  process(A, B,ENABLER)
   begin
     if A = B  AND ENABLER = '1' then
       S &lt;= '1';  -- Example output when A equals B
@@ -2531,7 +2585,7 @@ END DetectorDeZeroVHDL;
 
 ARCHITECTURE TypeArchitecture OF DetectorDeZeroVHDL IS
 BEGIN
-  process(A)
+  process(A,ENABLER)
   begin
     if A = "0000" AND ENABLER = '1' then
       S &lt;= '1';  -- Example output when A equals B
@@ -2570,7 +2624,7 @@ begin
                 when "10" =&gt;  -- Deslocamento para a esquerda
                     S &lt;= a(2 downto 0) &amp; '0';
                 when others =&gt;  -- Nenhuma operação
-                    S &lt;= "00";
+                    S &lt;= A;
             end case;
         else
             S &lt;= (others =&gt; '0');  -- Saída 0000 quando C é 0
@@ -2633,8 +2687,8 @@ ENTITY MuxVHDL IS
     subComp : IN  std_logic_vector(3 DOWNTO 0);
     andV : IN  std_logic_vector(3 DOWNTO 0);
     orV : IN  std_logic_vector(3 DOWNTO 0);
-    deslocador : IN  std_logic_vector(3 DOWNTO 0);
     comparador : IN  std_logic;
+    deslocador : IN  std_logic_vector(3 DOWNTO 0);
     detectorZero : IN  std_logic;
     sel     : IN  std_logic_vector(2 DOWNTO 0); -- 3 bits de seleção
     data_out : OUT std_logic_vector(4 DOWNTO 0)                    -- Saída
@@ -2651,12 +2705,119 @@ BEGIN
       when "010" =&gt; data_out &lt;= '0' &amp; subComp;
       when "011" =&gt; data_out &lt;= '0' &amp; andV;
       when "100" =&gt; data_out &lt;= '0' &amp; orV;
-      when "101" =&gt; data_out &lt;= '0' &amp; deslocador;
-      when "110" =&gt; data_out &lt;= "0000" &amp; comparador;
+      when "101" =&gt; data_out &lt;= "0000" &amp; comparador;
+      when "110" =&gt; data_out &lt;= '0' &amp; deslocador;
       when "111" =&gt; data_out &lt;= "0000" &amp; detectorZero;
       when others =&gt; data_out &lt;= "00000"; -- Caso indeterminado
     end case;
   end process;
 END Behavioral;
+</vhdl>
+  <vhdl name="completoVHDL">--------------------------------------------------------------------------------&#13;
+-- Project :&#13;
+-- File    :&#13;
+-- Autor   :&#13;
+-- Date    :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+-- Description :&#13;
+--&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+LIBRARY ieee;&#13;
+USE ieee.std_logic_1164.all;&#13;
+USE ieee.numeric_std.all; 
+&#13;
+ENTITY completoVHDL IS&#13;
+  PORT (&#13;
+  ------------------------------------------------------------------------------&#13;
+  --Insert input ports below&#13;
+                        -- input bit example&#13;
+    A        : IN  std_logic_vector(3 DOWNTO 0);
+    B       : IN  std_logic_vector(3 DOWNTO 0);
+    -- input vector example&#13;
+    ENABLER : IN std_logic;
+    SEL      : IN  std_logic_vector(2 DOWNTO 0);
+  ------------------------------------------------------------------------------&#13;
+	S       : OUT std_logic_vector(3 DOWNTO 0);
+	OV      : OUT std_logic
+    );&#13;
+END completoVHDL;&#13;
+&#13;
+--------------------------------------------------------------------------------&#13;
+--Complete your VHDL description below&#13;
+--------------------------------------------------------------------------------&#13;
+&#13;
+ARCHITECTURE TypeArchitecture OF completoVHDL IS&#13;
+&#13;signal CARRY : std_logic_vector(3 DOWNTO 0);
+SIGNAL B_complemento : unsigned(4 DOWNTO 0);
+SIGNAL B2 : unsigned(3 DOWNTO 0);
+signal result : unsigned(4 DOWNTO 0);
+BEGIN&#13;
+&#13;	PROCESS(A,B,SEL,ENABLER,CARRY,B_complemento,B2,result)
+	BEGIN
+		OV &lt;= '0';
+		S &lt;= "0000";
+		IF ENABLER = '1' THEN
+			IF (SEL = "000") THEN -- SOMA
+				
+				S(0) &lt;= A(0) xor B(0);
+				carry(1) &lt;= A(0) and B(0);
+				
+				S(1) &lt;= ((A(1) xor carry(1)) xor B(1));
+				carry(2) &lt;= (A(1) and carry(1)) or (B(1) and (A(1) xor carry(1)));
+				
+				S(2) &lt;= ((A(2) xor carry(2)) xor B(2));
+				carry(3) &lt;= (A(2) and carry(2)) or (B(2) and (A(2) xor carry(2)));
+				
+				S(3) &lt;= ((A(3) xor carry(3)) xor B(3));
+				OV &lt;= (A(3) and carry(3)) or (B(3) and (A(3) xor carry(3)));
+			ELSIF (SEL = "001") THEN -- SUBTRAÇÃO
+				  CARRY(0) &lt;= '0';
+                	FOR i IN 0 TO 2 LOOP
+	                    S(i) &lt;= A(i) XOR B(i) XOR CARRY(i);
+	                    CARRY(i+1) &lt;= ((NOT A(i)) AND CARRY(i)) OR (((NOT A(i)) XNOR (NOT CARRY(i))) AND B(i));
+                	END LOOP;
+	                S(3) &lt;= A(3) XOR B(3) XOR CARRY(3);
+	                OV &lt;= ((NOT A(3)) AND CARRY(3)) OR (((NOT A(3)) XNOR (NOT CARRY(3))) AND B(3));
+
+			ELSIF (SEL = "010") THEN --SUBTRAÇÃO POR COMPLEMENTO
+			      B_complemento &lt;= not unsigned('0' &amp; B) + 1;
+				 B2 &lt;= B_complemento(3 DOWNTO 0);
+
+			      result &lt;= unsigned('0' &amp; A) + unsigned('0' &amp; B2);
+			
+			      S &lt;= std_logic_vector(result(3 DOWNTO 0));
+			ELSIF (SEL = "011") THEN -- E
+				S&lt;= A AND B;
+			ELSIF (SEL = "100") THEN -- OU
+				S&lt;= A OR B;
+			ELSIF (SEL = "101") THEN --COMPARADOR
+				IF A = B THEN
+				     S &lt;= "0001";  -- Example output when A equals B
+    				ELSE
+      				S &lt;= "0000";
+      			END IF;
+			ELSIF (SEL = "110") THEN -- DESLOCADOR
+	          	case B is
+	               	when "0001" =&gt;  -- Deslocamento para a direita
+	               		S &lt;= '0' &amp; a(3 downto 1);
+	               	when "0010" =&gt;  -- Deslocamento para a esquerda
+	                    	S &lt;= a(2 downto 0) &amp; '0';
+	               	when others =&gt;  -- Nenhuma operação
+	                    	S &lt;= A;
+		            end case;
+			ELSIF (SEL = "111") THEN --DETECTOR DE ZERO
+				if A = "0000" then
+					S &lt;= "0001";  -- Example output when A equals B
+				else
+				     S &lt;= "0000";  -- Example output when A does not equal B
+				end if;
+			END IF;
+		END IF;
+	END PROCESS;
+
+&#13;
+END TypeArchitecture;&#13;
 </vhdl>
 </project>

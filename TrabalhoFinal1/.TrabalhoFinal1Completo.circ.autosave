@@ -1367,10 +1367,6 @@
     <comp lib="0" loc="(100,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(260,390)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="4"/>
-    </comp>
     <comp lib="0" loc="(280,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Entrada2"/>
@@ -1389,9 +1385,6 @@
     </comp>
     <comp lib="1" loc="(330,220)" name="AND Gate"/>
     <comp lib="1" loc="(530,170)" name="OR Gate"/>
-    <comp loc="(480,390)" name="DeslocadorVHDL">
-      <a name="appearance" val="logisim_evolution"/>
-    </comp>
     <wire from="(100,120)" to="(100,240)"/>
     <wire from="(100,120)" to="(270,120)"/>
     <wire from="(100,240)" to="(100,280)"/>
@@ -1527,8 +1520,7 @@
     <wire from="(520,200)" to="(680,200)"/>
     <wire from="(520,70)" to="(520,180)"/>
     <wire from="(670,430)" to="(680,430)"/>
-    <wire from="(680,220)" to="(680,240)"/>
-    <wire from="(680,240)" to="(680,430)"/>
+    <wire from="(680,220)" to="(680,430)"/>
   </circuit>
   <circuit name="Demux">
     <a name="appearance" val="logisim_evolution"/>

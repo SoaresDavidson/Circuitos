@@ -199,6 +199,9 @@
     <comp loc="(1010,430)" name="BiHex"/>
     <comp loc="(450,460)" name="BiHex"/>
     <comp loc="(550,650)" name="BiHex"/>
+    <comp loc="(560,860)" name="BiHex_VHDL">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <comp loc="(570,150)" name="TrabalhoFinal1"/>
     <comp loc="(570,260)" name="completoVHDL">
       <a name="appearance" val="logisim_evolution"/>
@@ -290,6 +293,157 @@
     <wire from="(730,170)" to="(730,500)"/>
     <wire from="(730,170)" to="(770,170)"/>
     <wire from="(730,500)" to="(770,500)"/>
+  </circuit>
+  <circuit name="main_VHDL">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="main_VHDL"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(110,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="A"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(110,150)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="B"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(150,170)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(150,190)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(150,420)" name="Splitter">
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(160,620)" name="Splitter">
+      <a name="bit0" val="3"/>
+      <a name="bit1" val="2"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="0"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(450,200)" name="Splitter">
+      <a name="bit0" val="4"/>
+      <a name="bit1" val="3"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="0"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="5" loc="(530,380)" name="7-Segment Display"/>
+    <comp lib="5" loc="(540,580)" name="7-Segment Display"/>
+    <comp lib="5" loc="(830,160)" name="7-Segment Display"/>
+    <comp loc="(370,130)" name="trabalhoFinal1VHDL"/>
+    <comp loc="(390,350)" name="BiHex_VHDL">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(400,550)" name="BiHex_VHDL">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(690,130)" name="BiHex_VHDL">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(110,130)" to="(130,130)"/>
+    <wire from="(110,150)" to="(110,620)"/>
+    <wire from="(110,150)" to="(150,150)"/>
+    <wire from="(110,620)" to="(160,620)"/>
+    <wire from="(130,130)" to="(130,420)"/>
+    <wire from="(130,130)" to="(150,130)"/>
+    <wire from="(130,420)" to="(150,420)"/>
+    <wire from="(370,130)" to="(370,220)"/>
+    <wire from="(370,220)" to="(450,220)"/>
+    <wire from="(390,350)" to="(550,350)"/>
+    <wire from="(390,370)" to="(560,370)"/>
+    <wire from="(390,390)" to="(400,390)"/>
+    <wire from="(390,410)" to="(520,410)"/>
+    <wire from="(390,430)" to="(500,430)"/>
+    <wire from="(390,450)" to="(460,450)"/>
+    <wire from="(390,470)" to="(480,470)"/>
+    <wire from="(400,310)" to="(400,390)"/>
+    <wire from="(400,310)" to="(590,310)"/>
+    <wire from="(400,550)" to="(560,550)"/>
+    <wire from="(400,570)" to="(570,570)"/>
+    <wire from="(400,590)" to="(410,590)"/>
+    <wire from="(400,610)" to="(530,610)"/>
+    <wire from="(400,630)" to="(510,630)"/>
+    <wire from="(400,650)" to="(470,650)"/>
+    <wire from="(400,670)" to="(490,670)"/>
+    <wire from="(410,510)" to="(410,590)"/>
+    <wire from="(410,510)" to="(600,510)"/>
+    <wire from="(450,200)" to="(450,220)"/>
+    <wire from="(460,360)" to="(460,450)"/>
+    <wire from="(460,360)" to="(540,360)"/>
+    <wire from="(470,560)" to="(470,650)"/>
+    <wire from="(470,560)" to="(550,560)"/>
+    <wire from="(480,330)" to="(480,470)"/>
+    <wire from="(480,330)" to="(530,330)"/>
+    <wire from="(490,530)" to="(490,670)"/>
+    <wire from="(490,530)" to="(540,530)"/>
+    <wire from="(500,430)" to="(500,470)"/>
+    <wire from="(500,470)" to="(530,470)"/>
+    <wire from="(510,630)" to="(510,670)"/>
+    <wire from="(510,670)" to="(540,670)"/>
+    <wire from="(520,410)" to="(520,450)"/>
+    <wire from="(520,450)" to="(540,450)"/>
+    <wire from="(530,330)" to="(530,380)"/>
+    <wire from="(530,440)" to="(530,470)"/>
+    <wire from="(530,610)" to="(530,650)"/>
+    <wire from="(530,650)" to="(550,650)"/>
+    <wire from="(540,360)" to="(540,380)"/>
+    <wire from="(540,440)" to="(540,450)"/>
+    <wire from="(540,530)" to="(540,580)"/>
+    <wire from="(540,640)" to="(540,670)"/>
+    <wire from="(550,350)" to="(550,380)"/>
+    <wire from="(550,440)" to="(550,450)"/>
+    <wire from="(550,450)" to="(590,450)"/>
+    <wire from="(550,560)" to="(550,580)"/>
+    <wire from="(550,640)" to="(550,650)"/>
+    <wire from="(560,370)" to="(560,380)"/>
+    <wire from="(560,550)" to="(560,580)"/>
+    <wire from="(560,640)" to="(560,650)"/>
+    <wire from="(560,650)" to="(600,650)"/>
+    <wire from="(570,570)" to="(570,580)"/>
+    <wire from="(590,310)" to="(590,450)"/>
+    <wire from="(600,510)" to="(600,650)"/>
+    <wire from="(690,130)" to="(850,130)"/>
+    <wire from="(690,150)" to="(860,150)"/>
+    <wire from="(690,170)" to="(700,170)"/>
+    <wire from="(690,190)" to="(820,190)"/>
+    <wire from="(690,210)" to="(800,210)"/>
+    <wire from="(690,230)" to="(760,230)"/>
+    <wire from="(690,250)" to="(780,250)"/>
+    <wire from="(700,90)" to="(700,170)"/>
+    <wire from="(700,90)" to="(890,90)"/>
+    <wire from="(760,140)" to="(760,230)"/>
+    <wire from="(760,140)" to="(840,140)"/>
+    <wire from="(780,110)" to="(780,250)"/>
+    <wire from="(780,110)" to="(830,110)"/>
+    <wire from="(800,210)" to="(800,250)"/>
+    <wire from="(800,250)" to="(830,250)"/>
+    <wire from="(820,190)" to="(820,230)"/>
+    <wire from="(820,230)" to="(840,230)"/>
+    <wire from="(830,110)" to="(830,160)"/>
+    <wire from="(830,220)" to="(830,250)"/>
+    <wire from="(840,140)" to="(840,160)"/>
+    <wire from="(840,220)" to="(840,230)"/>
+    <wire from="(850,130)" to="(850,160)"/>
+    <wire from="(850,220)" to="(850,230)"/>
+    <wire from="(850,230)" to="(890,230)"/>
+    <wire from="(860,150)" to="(860,160)"/>
+    <wire from="(890,90)" to="(890,230)"/>
   </circuit>
   <circuit name="TrabalhoFinal1">
     <a name="appearance" val="logisim_evolution"/>
@@ -1367,10 +1521,6 @@
     <comp lib="0" loc="(100,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
-    <comp lib="0" loc="(260,390)" name="Pin">
-      <a name="appearance" val="NewPins"/>
-      <a name="width" val="4"/>
-    </comp>
     <comp lib="0" loc="(280,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Entrada2"/>
@@ -1389,9 +1539,6 @@
     </comp>
     <comp lib="1" loc="(330,220)" name="AND Gate"/>
     <comp lib="1" loc="(530,170)" name="OR Gate"/>
-    <comp loc="(480,390)" name="DeslocadorVHDL">
-      <a name="appearance" val="logisim_evolution"/>
-    </comp>
     <wire from="(100,120)" to="(100,240)"/>
     <wire from="(100,120)" to="(270,120)"/>
     <wire from="(100,240)" to="(100,280)"/>
@@ -1527,8 +1674,7 @@
     <wire from="(520,200)" to="(680,200)"/>
     <wire from="(520,70)" to="(520,180)"/>
     <wire from="(670,430)" to="(680,430)"/>
-    <wire from="(680,220)" to="(680,240)"/>
-    <wire from="(680,240)" to="(680,430)"/>
+    <wire from="(680,220)" to="(680,430)"/>
   </circuit>
   <circuit name="Demux">
     <a name="appearance" val="logisim_evolution"/>
@@ -3502,5 +3648,51 @@ BEGIN&#13;
 
 &#13;
 END TypeArchitecture;&#13;
+</vhdl>
+  <vhdl name="BiHex_VHDL">library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+entity BiHex_VHDL is
+    Port (
+        AA : in STD_LOGIC;
+        BB  : in STD_LOGIC;
+        CC  : in STD_LOGIC;
+        DD  : in STD_LOGIC;
+        a   : out STD_LOGIC;
+        b   : out STD_LOGIC;
+        c   : out STD_LOGIC;
+        d   : out STD_LOGIC;
+        e   : out STD_LOGIC;
+        f   : out STD_LOGIC;
+        g   : out STD_LOGIC
+    );
+end BiHex_VHDL;
+
+architecture Behavioral of BiHex_VHDL is
+begin
+    a &lt;= (not BB and not DD) or (not AA and CC) or 
+         (not AA and BB and DD) or (AA and not BB and not CC) or (AA and not DD) or 
+         (BB and CC);
+
+    b &lt;= (not AA and not CC and not DD) or (not AA and CC and DD) or 
+         (not AA and not BB) or (not BB and not DD)or (AA and not CC and DD);
+
+    c &lt;= (not AA and BB) or (AA and not BB) or 
+         (not CC and DD) or (not BB and DD) or (not BB and not CC);
+
+    d &lt;= (BB and not CC and DD) or (not AA and not BB and not DD) or 
+         (not BB and CC and DD) or (AA and not CC) or 
+         (BB and CC and not DD);
+
+    e &lt;= (not BB and not DD) or (CC and not DD) or 
+         (AA and CC) or (AA and BB);
+
+    f &lt;= (not CC and not DD) or (not AA and BB and not CC) or 
+         (BB and not DD) or (AA and not BB) or (AA and CC);
+
+    g &lt;= (not BB and CC) or (AA and not BB) or 
+         (not AA and BB and not CC) or (CC and not DD) or 
+         (AA and DD);
+end Behavioral;
 </vhdl>
 </project>

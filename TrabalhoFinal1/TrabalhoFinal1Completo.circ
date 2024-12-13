@@ -106,11 +106,11 @@
       <a name="label" val="SEL"/>
       <a name="width" val="3"/>
     </comp>
-    <comp lib="0" loc="(1430,330)" name="Tunnel">
-      <a name="label" val="SelHex"/>
-    </comp>
     <comp lib="0" loc="(1440,290)" name="Tunnel">
       <a name="label" val="SelBi"/>
+    </comp>
+    <comp lib="0" loc="(1440,330)" name="Tunnel">
+      <a name="label" val="SelHex"/>
     </comp>
     <comp lib="0" loc="(390,280)" name="Pin">
       <a name="appearance" val="NewPins"/>
@@ -188,7 +188,7 @@
     <comp lib="0" loc="(600,750)" name="Tunnel">
       <a name="label" val="SelHex"/>
     </comp>
-    <comp lib="0" loc="(690,220)" name="Tunnel">
+    <comp lib="0" loc="(690,200)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="S"/>
       <a name="width" val="4"/>
@@ -541,7 +541,7 @@
     <wire from="(1220,1050)" to="(1220,1070)"/>
     <wire from="(1220,1070)" to="(1270,1070)"/>
     <wire from="(1220,290)" to="(1220,300)"/>
-    <wire from="(1220,290)" to="(1430,290)"/>
+    <wire from="(1220,290)" to="(1320,290)"/>
     <wire from="(1220,330)" to="(1220,340)"/>
     <wire from="(1220,340)" to="(1250,340)"/>
     <wire from="(1220,350)" to="(1220,410)"/>
@@ -628,6 +628,8 @@
     <wire from="(1310,950)" to="(1380,950)"/>
     <wire from="(1320,1050)" to="(1320,1070)"/>
     <wire from="(1320,1070)" to="(1370,1070)"/>
+    <wire from="(1320,290)" to="(1320,300)"/>
+    <wire from="(1320,290)" to="(1430,290)"/>
     <wire from="(1320,330)" to="(1320,340)"/>
     <wire from="(1320,340)" to="(1350,340)"/>
     <wire from="(1320,350)" to="(1320,410)"/>
@@ -643,7 +645,6 @@
     <wire from="(1320,750)" to="(1320,760)"/>
     <wire from="(1320,760)" to="(1350,760)"/>
     <wire from="(1320,840)" to="(1320,870)"/>
-    <wire from="(1320,870)" to="(1330,870)"/>
     <wire from="(1320,900)" to="(1320,940)"/>
     <wire from="(1320,940)" to="(1370,940)"/>
     <wire from="(1320,970)" to="(1320,990)"/>
@@ -676,6 +677,7 @@
     <wire from="(140,460)" to="(140,600)"/>
     <wire from="(1430,290)" to="(1430,320)"/>
     <wire from="(1430,290)" to="(1440,290)"/>
+    <wire from="(1430,330)" to="(1440,330)"/>
     <wire from="(1440,580)" to="(1450,580)"/>
     <wire from="(150,480)" to="(150,610)"/>
     <wire from="(160,430)" to="(160,500)"/>
@@ -696,7 +698,6 @@
     <wire from="(190,580)" to="(190,600)"/>
     <wire from="(190,600)" to="(240,600)"/>
     <wire from="(200,370)" to="(200,400)"/>
-    <wire from="(200,400)" to="(210,400)"/>
     <wire from="(200,430)" to="(200,440)"/>
     <wire from="(200,440)" to="(230,440)"/>
     <wire from="(200,450)" to="(200,520)"/>
@@ -857,7 +858,7 @@
     <wire from="(680,650)" to="(680,670)"/>
     <wire from="(680,870)" to="(680,910)"/>
     <wire from="(680,910)" to="(710,910)"/>
-    <wire from="(690,220)" to="(690,240)"/>
+    <wire from="(690,200)" to="(690,240)"/>
     <wire from="(690,580)" to="(690,590)"/>
     <wire from="(690,880)" to="(690,930)"/>
     <wire from="(690,930)" to="(700,930)"/>
@@ -5324,10 +5325,10 @@ begin
     	   x &lt;= '0';
     	   y &lt;= '0';
         case a is
-            when "000" | "001" | "010" | "101" | "110" | "111" =&gt;
+            when "000" | "001" | "010" | "101"  | "111" =&gt;
                 x &lt;= '1';
                 y &lt;= '0';
-            when "011" | "100" =&gt;
+            when "011" | "100" | "110" =&gt;
                 x &lt;= '0';
                 y &lt;= '1';
             when others =&gt;

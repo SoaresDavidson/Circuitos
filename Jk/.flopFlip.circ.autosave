@@ -2068,10 +2068,6 @@
       <a name="label" val="VQ2"/>
     </comp>
     <comp lib="0" loc="(1700,480)" name="Splitter">
-      <a name="bit0" val="3"/>
-      <a name="bit1" val="2"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="0"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
       <a name="spacing" val="4"/>
@@ -3622,14 +3618,15 @@ BEGIN
         IF clear = '1' THEN
             REG &lt;= "0000"; 
 
-        ELSIF rising_edge(clock) THEN
+        ELSIF falling_edge(clock) THEN
             CASE sel IS
                 WHEN "00" =&gt;
                     REG &lt;= REG;
                 WHEN "01" =&gt;
-                    REG &lt;= j &amp; REG(3 DOWNTO 1);
-                WHEN "10" =&gt;
                     REG &lt;= REG(2 DOWNTO 0) &amp; j;
+                WHEN "10" =&gt;
+                	REG &lt;= j &amp; REG(3 DOWNTO 1);
+                    
                 WHEN "11" =&gt;
                     REG &lt;= p;
                     
